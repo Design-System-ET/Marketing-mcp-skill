@@ -1,7 +1,41 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "instructions": ["PENDIENTES.md", ".opencode/skills/campaign-manager/SKILL.md"],
+  "instructions": ["PENDIENTES.md"],
+  "permission": {
+    "meta-ads_*": "deny",
+    "ga4_*": "deny",
+    "google-ads_*": "deny",
+    "klaviyo_*": "deny",
+    "mercadolibre_*": "deny",
+    "hubspot_*": "deny",
+    "google-sheets_*": "deny",
+    "google-search-console_*": "deny",
+    "notion_*": "deny",
+    "n8n_*": "deny",
+    "brave-search_*": "deny",
+    "x-twitter_*": "deny"
+  },
   "agent": {
+    "marketing-analyst": {
+      "description": "Especialista en marketing digital para onboarding de clientes en Uruguay. Diagnostico (F1), investigacion de mercado (F2), auditoria (F3), presencia digital (F4), estrategia (F5), setup tecnico (F6), pilotaje (F7), lanzamiento (F8) y resumen situacional (F9). Ejecuta las skills marketing-analyst y campaign-manager.",
+      "mode": "primary",
+      "color": "#00a86b",
+      "temperature": 0.2,
+      "permission": {
+        "meta-ads_*": "allow",
+        "ga4_*": "allow",
+        "google-ads_*": "allow",
+        "klaviyo_*": "allow",
+        "mercadolibre_*": "allow",
+        "hubspot_*": "allow",
+        "google-sheets_*": "allow",
+        "google-search-console_*": "allow",
+        "notion_*": "allow",
+        "n8n_*": "allow",
+        "brave-search_*": "allow",
+        "x-twitter_*": "allow"
+      }
+    },
     "java-dev": { "disable": true },
     "csharp-dev": { "disable": true },
     "web-dev": { "disable": true },

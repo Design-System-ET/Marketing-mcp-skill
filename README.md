@@ -126,7 +126,6 @@ python generar_reporte_word.py --cliente "NOMBRE"
 │       ├── 1-1-*.html a 9-1-*.html   # 34 reportes HTML
 │       └── Onboarding-MG Joyas-*.docx # Documento Word completo
 ├── opencode.json                     # Configuración MCPs + skills
-├── CONTEXT.md                        # Contexto completo del proyecto
 ├── PENDIENTES.md                     # MCPs pendientes de configurar
 ├── utils.py                          # Funciones compartidas
 ├── generar_reporte_html.py           # Generador principal — 34+ reportes HTML
