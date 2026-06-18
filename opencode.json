@@ -1,0 +1,116 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["PENDIENTES.md", ".opencode/skills/campaign-manager/SKILL.md"],
+  "agent": {
+    "java-dev": { "disable": true },
+    "csharp-dev": { "disable": true },
+    "web-dev": { "disable": true },
+    "genexus": { "disable": true }
+  },
+  "mcp": {
+    "mercadolibre": {
+      "type": "local",
+      "command": ["npx", "-y", "mercadolibre-mcp"],
+      "env": {
+        "CLIENT_ID": "TU_CLIENT_ID",
+        "CLIENT_SECRET": "TU_CLIENT_SECRET",
+        "SITE_ID": "MLU"
+      }
+    },
+    "google-ads": {
+      "type": "local",
+      "command": ["npx", "-y", "@samihalawa/google-ads-mcp-server"],
+      "env": {
+        "GOOGLE_ADS_CLIENT_ID": "TU_CLIENT_ID",
+        "GOOGLE_ADS_CLIENT_SECRET": "TU_CLIENT_SECRET",
+        "GOOGLE_ADS_DEVELOPER_TOKEN": "TU_DEV_TOKEN",
+        "GOOGLE_ADS_REFRESH_TOKEN": "TU_REFRESH_TOKEN"
+      }
+    },
+    "meta-ads": {
+      "type": "remote",
+      "url": "https://mcp.facebook.com/ads"
+    },
+    "ga4": {
+      "type": "local",
+      "command": ["npx", "-y", "mcp-google-analytics"],
+      "env": {
+        "GOOGLE_ANALYTICS_CLIENT_ID": "TU_CLIENT_ID",
+        "GOOGLE_ANALYTICS_CLIENT_SECRET": "TU_CLIENT_SECRET",
+        "GOOGLE_ANALYTICS_REFRESH_TOKEN": "TU_REFRESH_TOKEN"
+      }
+    },
+    "hubspot": {
+      "type": "local",
+      "command": ["npx", "-y", "@hubspot/mcp-server"],
+      "env": {
+        "PRIVATE_APP_ACCESS_TOKEN": "TU_TOKEN"
+      }
+    },
+    "google-sheets": {
+      "type": "local",
+      "command": ["npx", "-y", "@node2flow/google-sheets-mcp"],
+      "env": {
+        "GOOGLE_CLIENT_ID": "TU_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET": "TU_CLIENT_SECRET",
+        "GOOGLE_REFRESH_TOKEN": "TU_REFRESH_TOKEN"
+      }
+    },
+    "klaviyo": {
+      "type": "remote",
+      "url": "https://mcp.klaviyo.com/mcp"
+    },
+
+    "brave-search": {
+      "type": "local",
+      "command": ["npx", "-y", "@brave/brave-search-mcp-server"],
+      "env": {
+        "BRAVE_API_KEY": "TU_BRAVE_API_KEY"
+      }
+    },
+
+    "google-search": {
+      "type": "local",
+      "command": ["npx", "-y", "@mcp-server/google-search-mcp"]
+    },
+
+    "sequential-thinking": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+
+    "google-search-console": {
+      "type": "local",
+      "command": ["npx", "-y", "suganthan-gsc-mcp"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": "RUTA_A_CREDENTIALS.JSON"
+      }
+    },
+
+    "x-twitter": {
+      "type": "local",
+      "command": ["npx", "-y", "xactions"]
+    },
+
+    "notion": {
+      "type": "local",
+      "command": ["npx", "-y", "@notionhq/notion-mcp-server"],
+      "env": {
+        "NOTION_TOKEN": "TU_NOTION_TOKEN"
+      }
+    },
+
+    "n8n": {
+      "type": "local",
+      "command": ["npx", "-y", "n8n-mcp"],
+      "env": {
+        "N8N_MCP_URI": "http://localhost:5678"
+      }
+    },
+
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
+    }
+  }
+}
